@@ -1,0 +1,120 @@
+.top-navbar {
+    height: 60px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 900;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.page-title {
+    color: #333;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.user-dropdown {
+    color: #333;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.user-dropdown i {
+    font-size: 1.4rem;
+}
+
+.page-container {
+    padding: 1.5rem 2rem; 
+}
+
+/* Garante que o menu central ocupe o espaço disponível e alinhe os itens */
+.top-navbar {
+    height: 60px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+    /* Remova ou altere o space-between para flex-start */
+    justify-content: flex-start; 
+    position: sticky;
+    top: 0;
+    z-index: 900;
+    padding: 0 2rem;
+}
+
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 40px; /* Adiciona um recuo de 40px à esquerda do menu */
+    gap: 30px;
+    height: 100%;
+}
+
+/* Isso garante que o dropdown de usuário continue na extrema direita */
+.navbar-right {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Empurra apenas este item para o fim da linha */
+}
+
+.navbar-item {
+    position: relative;
+    height: 60px; /* Mesma altura da top-navbar para centralizar verticalmente */
+    display: flex;
+    align-items: center;
+}
+
+.navbar-item a {
+    text-decoration: none;
+    color: #4b5563; /* Cor cinza suave */
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Animação de Destaque (Linha inferior) */
+.navbar-item::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #0d6efd; /* Azul destaque */
+    transition: width 0.3s ease;
+}
+
+/* Estado Ativo e Hover */
+.navbar-item:hover a,
+.navbar-item.active a {
+    color: #0d6efd;
+}
+
+.navbar-item:hover::after,
+.navbar-item.active::after {
+    width: 100%;
+}
+
+/* Ajuste fino na navbar para separar os 3 blocos */
+.top-navbar {
+    padding: 0 2rem;
+}
